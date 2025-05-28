@@ -44,7 +44,8 @@ Add a proxy_pass directive inside the location block to forward requests to your
 Define an upstream block inside the http section to list your backend servers.
 
 Example nginx.conf:
-# http {
+#
+http {
     upstream backend {
         server nginx1:80;
         server nginx2:80;
