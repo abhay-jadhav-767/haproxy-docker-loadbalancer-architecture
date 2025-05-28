@@ -7,13 +7,15 @@ This project sets up a containerized load balancing architecture using HAProxy a
 ### Setup Guide: ###
 
 Step 1: Create a Docker Network (example: newnetwork)
-# docker network create newnetwork
+#
+    docker network create newnetwork
 
 Step 2: Create Four NGINX Containers
-# docker run -dit --name c1 --network newnetwork nginx
-# docker run -dit --name c2 --network newnetwork nginx
-# docker run -dit --name c3 --network newnetwork nginx
-# docker run -dit --name c4 --network newnetwork nginx
+# 
+    docker run -dit --name c1 --network newnetwork nginx
+    docker run -dit --name c2 --network newnetwork nginx
+    docker run -dit --name c3 --network newnetwork nginx
+    docker run -dit --name c4 --network newnetwork nginx
 
 Step 3: Modify the Index File in Each Container
 Update the default NGINX index file to identify each container. Please refer index.html for content.
