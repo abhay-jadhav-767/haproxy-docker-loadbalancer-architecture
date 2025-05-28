@@ -27,10 +27,12 @@ Step 5: Create the HAProxy Configuration File
 Create a file named haproxy.cfg. Please refer "haproxy.cfg" for file content.
 
 Step 6: Build the HAProxy Docker Image
-# docker build -f haproxydockerfile -t haproxy-custom .
+# 
+    docker build -f haproxydockerfile -t haproxy-custom .
 
 Step 7: Run the HAProxy Container
-# docker run -d --name haproxy-container -p 80:80 --network newnetwork haproxy-custom
+# 
+    docker run -d --name haproxy-container -p 80:80 --network newnetwork haproxy-custom
 
 Step 8: Test Load Balancing
 Open your EC2 instance’s public IP in a browser:
